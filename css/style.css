@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css2?family=Neucha&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.block_title {
+  background: #000000d0;
+  border-radius: 20px;
+  padding: 40px;
+  margin-top: 40px;
+}
+
+body {
+  background-repeat: repeat;
+  color: aliceblue;
+  font-family: "Neucha", cursive;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../image/9356942503ff92e46e8d489c939f60a7.jpg");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  z-index: -99;
+}
+
+img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5px;
+}
+.__container2 {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tytle {
+  text-align: center;
+  line-height: calc(19 / 15 * 100%);
+  font-size: calc(40px + 15 * (100vw / 1200));
+  margin-bottom: 40px;
+}
+.sub_tytle {
+  text-align: center;
+  line-height: calc(23 / 15 * 100%);
+  font-size: calc(14px + 5 * (100vw / 1200));
+}
+.sub_tytle_main {
+  font-size: calc(35px + 5 * (100vw / 1200));
+}
+
+.block-gifts {
+  margin-top: 70px;
+  margin-bottom: 100px;
+}
+
+.block-gift {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 240px;
+}
+
+.gift {
+  z-index: 1;
+  position: relative;
+  width: 170px;
+  border: 2px dotted #fff;
+  transition: 0.5s;
+  box-sizing: border-box;
+  margin: 0 1vw;
+  padding: 5px;
+}
+
+.gift:focus + .dift_image {
+  transform: scale(2, 2);
+}
+
+.emty_gift {
+  position: relative;
+  height: 200px;
+  transition: 0.5s;
+}
+.emty_text {
+  font-size: calc(17px + 5 * (100vw / 1200));
+  max-width: 156px;
+  word-wrap: break-word;
+  text-align: center;
+  align-items: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.none {
+  display: none;
+}
+.block {
+  display: block;
+}
+
+.dift_image {
+  position: relative;
+  height: 200px;
+  transition: 0.5s;
+}
+.gift:hover {
+  cursor: pointer;
+  padding: 15px;
+  transform: rotate(1turn);
+}
+
+@media (max-width: 700px) {
+  .dift_image {
+    position: none;
+    height: 100%;
+    transition: 0.5s;
+  }
+  .gift {
+    height: 80px;
+    width: 80px;
+  }
+  .gift:hover {
+    cursor: pointer;
+    padding: 7px;
+    transform: rotate(1turn);
+  }
+  .emty_gift {
+    height: 100%;
+  }
+  .emty_text {
+    font-size: calc(9px + 8 * (100vw / 1200));
+  }
+  .block-gift {
+    height: 100px;
+  }
+}
+
+.gift_text {
+  height: 100%;
+  position: relative;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  color: rgb(255, 255, 255);
+}
+
+.gift_text {
+  font-size: calc(24px + 35 * (100vw / 1200));
+}
+
+/*----------------------------------------------*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  position: relative;
+  background-color: #202020;
+  margin: auto;
+  padding: 0;
+  border: 5px solid #920f46;
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.close {
+  color: white;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 10px 16px;
+  background-color: #202020;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(13px + 8 * (100vw / 1200));
+}
+
+.modal-body {
+  padding: 2px 5px;
+  height: 400px;
+}
+
+@media (max-width: 700px) {
+  .modal-body {
+    height: 200px;
+  }
+}
+
+.modal-footer {
+  padding: 10px 16px;
+  background-color: #252525;
+  color: white;
+  font-size: calc(13px + 8 * (100vw / 1200));
+}
+.modal-Image {
+  position: relative;
+  height: 100%;
+}
+
+/*-----параллакс-------------------------------*/
+
+.mouse-parallax {
+  position: relative;
+  overflow: hidden;
+}
+.mouse-parallax-bg {
+  opacity: 0.5;
+  position: fixed;
+  background-image: url("../image/1580390004_parad-juon.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 140%;
+  height: 120%;
+  transition: all 0.1s ease;
+  z-index: -9;
+}
+
+/*-----snow-------------------------------*/
+.snowContainer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#snow {
+  width: 100%;
+  height: 100%;
+  background-image: url("../snow/snow_1.png"), url("../snow/snow_2.png"),
+    url("../snow/snow_3.png");
+  -webkit-animation: snow 20s linear infinite;
+  -moz-animation: snow 20s linear infinite;
+  -ms-animation: snow 20s linear infinite;
+  animation: snow 20s linear infinite;
+}
+
+@keyframes snow {
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px;
+  }
+  100% {
+    background-position: 500px 1000px, 400px 400px, 300px 300px;
+  }
+}
+
+@-moz-keyframes snow {
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px;
+  }
+  100% {
+    background-position: 500px 1000px, 400px 400px, 300px 300px;
+  }
+}
+
+@-webkit-keyframes snow {
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px;
+  }
+  100% {
+    background-position: 500px 1000px, 400px 400px, 300px 300px;
+  }
+}
+
+@-ms-keyframes snow {
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px;
+  }
+  100% {
+    background-position: 500px 1000px, 400px 400px, 300px 300px;
+  }
+}
+
+/*---------preloader----------------*/
+
+#preloader {
+  z-index: 1000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+}
+
+#preloader_text {
+  font-size: calc(15px + 40 * (100vw / 1200));
+  text-align: center;
+  font-family: none;
+}
+
+#preloader img {
+  position: relative;
+  object-fit: contain;
+  max-width: 30%;
+  display: block;
+  margin: 0 auto;
+}
+#preloader.hide-preloader {
+  animation: hidePreloader 1s;
+}
+
+#preloader.preloader-hidden {
+  display: none;
+}
+
+@keyframes hidePreloader {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
