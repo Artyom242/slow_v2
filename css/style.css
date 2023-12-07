@@ -246,7 +246,7 @@ img {
 @media (max-width: 700px) {
   .modal-content {
     width: 90vw;
-    height: 70vh;
+    height: 60vh;
   }
 }
 
@@ -337,7 +337,6 @@ img {
 }
 
 /*---------preloader----------------*/
-
 #preloader {
   z-index: 1000000;
   position: fixed;
@@ -349,18 +348,27 @@ img {
 }
 
 #preloader_text {
-  font-size: calc(15px + 40 * (100vw / 1200));
+  padding-top: 10px;
+  font-size: calc(30px + 5 * (100vw / 1200));
   text-align: center;
-  font-family: none;
+  font-family: "Julee";
+  color: aliceblue;
 }
-
+#preloader_block {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 #preloader img {
   position: relative;
   object-fit: contain;
-  max-width: 30%;
+  max-width: 200px;
+  height: auto;
   display: block;
   margin: 0 auto;
 }
+
 #preloader.hide-preloader {
   animation: hidePreloader 1s;
 }
