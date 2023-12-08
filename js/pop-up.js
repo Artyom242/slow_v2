@@ -80,7 +80,7 @@ window.onclick = function (event) {
 
 for (let elem of elements) {
     elem.addEventListener("click", () => {
-        if (nowDay >= elem.dataset.num && nowMonth == 11 || nowYear == 2023){
+        if (nowDay >= elem.dataset.num && nowMonth == 11 || nowYear == 2024){
             test(elem.dataset.num);
         }
         console.log(elem.dataset.num);
